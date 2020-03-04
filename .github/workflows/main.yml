@@ -22,3 +22,12 @@ jobs:
  
     - name: Build and Publish Web App
       run: msbuild ClassLibraryTest.sln /p:Configuration=Release /p:DeployOnBuild=true /p:PublishProfile=FolderProfile
+      
+    - name: Upload Artifact
+      uses: actions/upload-artifact@v1.0.0
+      with:
+        name: published_lib
+        path: ClassLibraryTest\bin\Release\netstandard2.0
+
+    - name: Publish Nuget to Packages
+      run: nuget push ClassLibraryTest\bin\Release\netstandard2.0\publish\*.nupkg -k ${{ secrets.GITHUB_TOKEN }} -Source https://nuget.pkg.github.com/tgoze/index.json 
