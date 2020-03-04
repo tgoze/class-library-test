@@ -28,3 +28,6 @@ jobs:
       with:
         name: published_lib
         path: ClassLibraryTest\bin\Release\netstandard2.0
+
+    - name: Publish Nuget to Packages
+      uses: nuget push ClassLibraryTest\bin\Release\netstandard2.0\publish\*.nupkg -k ${{ secrets.GITHUB_TOKEN }} -Source https://nuget.pkg.github.com/tgoze/index.json 
