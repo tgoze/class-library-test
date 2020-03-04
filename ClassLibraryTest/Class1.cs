@@ -6,7 +6,7 @@ namespace ClassLibraryTest
     {
         Class1()
         {
-            Console.WriteLine("build me!");
+            Console.WriteLine("build me2!");
         }
     }
 }
