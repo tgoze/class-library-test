@@ -3,6 +3,9 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <Description></Description>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://nuget.pkg.github.com/tgoze/class-library-test</RepositoryUrl>
   </PropertyGroup>
 
 </Project>
