@@ -30,4 +30,4 @@ jobs:
         path: ClassLibraryTest\bin\Release\netstandard2.0
 
     - name: Publish Nuget to Packages
-      run: nuget push ClassLibraryTest\bin\Release\netstandard2.0\publish\*.nupkg a8e444e99b791cbada91bf73e90477805e0b5a8d -Source https://nuget.pkg.github.com/tgoze/index.json 
+      run: nuget push ClassLibraryTest\bin\Release\netstandard2.0\publish\*.nupkg cb176ba35084a41c3b567c9c5aaaf3bb72061a7d -Source https://nuget.pkg.github.com/tgoze/index.json 
