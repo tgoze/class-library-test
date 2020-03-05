@@ -25,6 +25,9 @@ jobs:
       
     - name: Pack Up
       run: dotnet pack ClassLibraryTest --configuration Release
-    
-    - name: Publish
-      run: dotnet nuget push ClassLibraryTest\bin\Release\*.nupkg -k ${{ secrets.GITHUB_TOKEN }} -s https://nuget.pkg.github.com/tgoze/index.json
+      
+    - name: Add private GitHub registry to NuGet
+      run: nuget sources add -name "GPR" -Source https://nuget.pkg.github.com/tgoze/index.json -Username tjgoze@gmail.com -Password ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Push generated package to GitHub registry
+      run: nuget push ClassLibraryTest\bin\Release\*.nupkg -Source "GPR" -SkipDuplicate
