@@ -1,6 +1,8 @@
 name: Publish NuGet
  
-on: [push]
+on:
+ release:
+   types: [created]
  
 jobs:
   build:
@@ -20,7 +22,7 @@ jobs:
     - name: Restore NuGet Packages
       run: nuget restore ClassLibraryTest.sln
  
-    - name: Build and Publish Web App
+    - name: Build and Publish Library
       run: msbuild ClassLibraryTest.sln /p:Configuration=Release /p:DeployOnBuild=true /p:PublishProfile=FolderProfile
       
     - name: Pack Up
