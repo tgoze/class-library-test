@@ -3,10 +3,10 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
-    <Description>This is my fourth.2nd configuration. I am a test library that is teaching TJ how to CI the crap out of things.</Description>
+    <Description>This is my fourth.2nd.1th configuration. I am a test library that is teaching TJ how to CI the crap out of things.</Description>
     <RepositoryType>git</RepositoryType>
     <RepositoryUrl>https://github.com/tgoze/class-library-test</RepositoryUrl>
-    <Version>4.2.0</Version>
+    <Version>4.2.1</Version>
   </PropertyGroup>
 
 </Project>
